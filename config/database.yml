@@ -24,6 +24,10 @@ test:
   username: root
 
 production:
-  <<: *default
-  database: db_production
-  username: root
+  adapter: mysql2
+  encoding: utf8
+  username: sqale_fbae63edd4
+  password: 096fda060c05f0dcc1447ec9f227964cc7e006642352fdd2
+  database: sqale_fbae63edd4
+  host: mysql001.sqale.jp
+
