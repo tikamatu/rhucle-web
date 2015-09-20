@@ -1,0 +1,2 @@
+module DiscoBoxesHelper
+end
