@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @disco_box.title %>
+</p>
+
+<p>
+  <strong>Url:</strong>
+  <%= @disco_box.url %>
+</p>
+
+<p>
+  <strong>Jacket:</strong>
+  <%= @disco_box.jacket %>
+</p>
+
+<p>
+  <strong>Icon context type:</strong>
+  <%= @disco_box.icon_context_type %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @disco_box.price %>
+</p>
+
+<p>
+  <strong>Track list:</strong>
+  <%= @disco_box.track_list %>
+</p>
+
+<%= link_to 'Edit', edit_disco_box_path(@disco_box) %> |
+<%= link_to 'Back', disco_boxes_path %>
