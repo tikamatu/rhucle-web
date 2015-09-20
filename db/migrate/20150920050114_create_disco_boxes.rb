@@ -3,7 +3,7 @@ class CreateDiscoBoxes < ActiveRecord::Migration
     create_table :disco_boxes do |t|
       t.string :title
       t.text :url
-      t.binary :jacket
+      t.string :jacket
       t.integer :price
       t.text :track_list
 

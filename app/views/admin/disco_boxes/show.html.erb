@@ -12,7 +12,9 @@
 
 <p>
   <strong>アートワーク:</strong>
-  <%= image_tag show_image_disco_box_path(@disco_box) %>
+  <% if @disco_box.jacket? %>
+    <%= image_tag @disco_box.jacket.url %>
+  <% end %>
 </p>
 
 <p>
@@ -25,5 +27,5 @@
   <%= @disco_box.track_list %>
 </p>
 
-<%= link_to '編集', edit_disco_box_path(@disco_box) %> |
-<%= link_to '戻る', disco_boxes_path %>
+<%= link_to '編集', edit_admin_disco_box_path(@disco_box) %> |
+<%= link_to '戻る', admin_disco_boxes_path %>

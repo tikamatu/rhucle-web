@@ -1,4 +1,4 @@
-<%= form_for(@disco_box) do |f| %>
+<%= form_for [:admin, @disco_box] do |f| %>
   <% if @disco_box.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@disco_box.errors.count, "error") %> prohibited this disco_box from being saved:</h2>
@@ -20,8 +20,21 @@
     <%= f.text_area :url %>
   </div>
   <div class="field">
+    <% if @disco_box.jacket? %>
+      <%= image_tag @disco_box.jacket.url %>
+    <% end %></br>
     アートワーク
     <%= f.file_field :jacket %>
+    <%= f.hidden_field :jacket_cache %>
+  </div>
+  <div class="field">
+    <!-- 既存レコード(DBに保存されている)かつ、画像が存在する場合 -->
+    <% if @disco_box.persisted? && @disco_box.jacket? %>
+      <label>
+        <%= f.check_box :remove_jacket %>
+        画像を削除
+      </label>
+    <% end %>
   </div>
   <div class="field">
     価格

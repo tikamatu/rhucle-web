@@ -1,4 +1,5 @@
-class DiscoBoxesController < ApplicationController
+class Admin::DiscoBoxesController < ApplicationController
+  layout 'admin_application'
   before_action :set_disco_box, only: [:show, :edit, :update, :destroy]
 
   # GET /disco_boxes
@@ -10,14 +11,6 @@ class DiscoBoxesController < ApplicationController
   # GET /disco_boxes/1
   # GET /disco_boxes/1.json
   def show
-  end
-
-  def show_image
-    @image = DiscoBox.find(params[:id])
-    send_data @image.jacket,
-              :filename => 'test.jpg',
-              :type => 'image/jpg',
-              :disposition => 'inline'
   end
 
   # GET /disco_boxes/new
@@ -36,7 +29,7 @@ class DiscoBoxesController < ApplicationController
 
     respond_to do |format|
       if @disco_box.save
-        format.html { redirect_to @disco_box, notice: 'Disco box was successfully created.' }
+        format.html { redirect_to admin_disco_box_path(@disco_box), notice: 'Disco box was successfully created.' }
         format.json { render :show, status: :created, location: @disco_box }
       else
         format.html { render :new }
@@ -50,7 +43,7 @@ class DiscoBoxesController < ApplicationController
   def update
     respond_to do |format|
       if @disco_box.update(disco_box_params)
-        format.html { redirect_to @disco_box, notice: '正常に編集しました。' }
+        format.html { redirect_to admin_disco_box_path(@disco_box), notice: '正常に編集しました。' }
         format.json { render :show, status: :ok, location: @disco_box }
       else
         format.html { render :edit }
@@ -64,7 +57,7 @@ class DiscoBoxesController < ApplicationController
   def destroy
     @disco_box.destroy
     respond_to do |format|
-      format.html { redirect_to disco_boxes_url, notice: '正常に削除しました。' }
+      format.html { redirect_to admin_disco_boxes_url, notice: '正常に削除しました。' }
       format.json { head :no_content }
     end
   end
@@ -77,6 +70,6 @@ class DiscoBoxesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def disco_box_params
-      params.require(:disco_box).permit(:title, :url, :jacket, :price, :track_list)
+      params.require(:disco_box).permit(:title, :url, :jacket, :jacket_cache, :remove_jacket, :price, :track_list)
     end
 end

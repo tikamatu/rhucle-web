@@ -2,7 +2,7 @@
 
 <h1>Discography</h1>
 
-<table border="1">
+<table border="1" align=center>
   <thead>
     <tr>
       <th>タイトル</th>
@@ -19,13 +19,12 @@
       <tr>
         <td><%= disco_box.title %></td>
         <td><%= disco_box.url %></td>
-<%= url_for(:action => 'show_image', :id => disco_box.id) %>
-        <td><%= image_tag (url_for(:action => 'show_image', :id => disco_box.id)) %></td>
+        <td><%= disco_box.jacket? ? 'あり' : 'なし' %></td>
         <td><%= disco_box.price %></td>
         <td><%= disco_box.track_list %></td>
-        <td><%= link_to '詳細', disco_box %></td>
-        <td><%= link_to '編集', edit_disco_box_path(disco_box) %></td>
-        <td><%= link_to '削除', disco_box, method: :delete, data: { confirm: '本当に削除しますか？データの復旧はできません。' } %></td>
+        <td><%= link_to '詳細', admin_disco_box_path(disco_box) %></td>
+        <td><%= link_to '編集', edit_admin_disco_box_path(disco_box) %></td>
+        <td><%= link_to '削除', admin_disco_box_path(disco_box), method: :delete, data: { confirm: '本当に削除しますか？データの復旧はできません。' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -33,4 +32,5 @@
 
 <br>
 
-<%= link_to '新規作成', new_disco_box_path %>
+<%= link_to '新規作成', new_admin_disco_box_path %> |
+<%= link_to '編集用TOPへ', "#" %>
