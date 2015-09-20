@@ -1,6 +1,11 @@
 Rails.application.routes.draw do
   root 'disco_boxes#index'
   resources :disco_boxes
+  resources :disco_boxes do
+    member do
+      get 'show_image'
+    end
+  end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

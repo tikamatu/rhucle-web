@@ -1,17 +1,16 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Disco Boxes</h1>
+<h1>Discography</h1>
 
-<table>
+<table border="1">
   <thead>
     <tr>
-      <th>Title</th>
-      <th>Url</th>
-      <th>Jacket</th>
-      <th>Icon context type</th>
-      <th>Price</th>
-      <th>Track list</th>
-      <th colspan="3"></th>
+      <th>タイトル</th>
+      <th>URL</th>
+      <th>アートワーク</th>
+      <th>価格</th>
+      <th>収録楽曲</th>
+      <th colspan="3">操作</th>
     </tr>
   </thead>
 
@@ -20,13 +19,13 @@
       <tr>
         <td><%= disco_box.title %></td>
         <td><%= disco_box.url %></td>
-        <td><%= disco_box.jacket %></td>
-        <td><%= disco_box.icon_context_type %></td>
+<%= url_for(:action => 'show_image', :id => disco_box.id) %>
+        <td><%= image_tag (url_for(:action => 'show_image', :id => disco_box.id)) %></td>
         <td><%= disco_box.price %></td>
         <td><%= disco_box.track_list %></td>
-        <td><%= link_to 'Show', disco_box %></td>
-        <td><%= link_to 'Edit', edit_disco_box_path(disco_box) %></td>
-        <td><%= link_to 'Destroy', disco_box, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to '詳細', disco_box %></td>
+        <td><%= link_to '編集', edit_disco_box_path(disco_box) %></td>
+        <td><%= link_to '削除', disco_box, method: :delete, data: { confirm: '本当に削除しますか？データの復旧はできません。' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -34,4 +33,4 @@
 
 <br>
 
-<%= link_to 'New Disco box', new_disco_box_path %>
+<%= link_to '新規作成', new_disco_box_path %>

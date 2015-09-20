@@ -1,34 +1,29 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Title:</strong>
+  <strong>タイトル:</strong>
   <%= @disco_box.title %>
 </p>
 
 <p>
-  <strong>Url:</strong>
+  <strong>URL:</strong>
   <%= @disco_box.url %>
 </p>
 
 <p>
-  <strong>Jacket:</strong>
-  <%= @disco_box.jacket %>
+  <strong>アートワーク:</strong>
+  <%= image_tag show_image_disco_box_path(@disco_box) %>
 </p>
 
 <p>
-  <strong>Icon context type:</strong>
-  <%= @disco_box.icon_context_type %>
+  <strong>価格:</strong>
+  <%= @disco_box.price %>円
 </p>
 
 <p>
-  <strong>Price:</strong>
-  <%= @disco_box.price %>
-</p>
-
-<p>
-  <strong>Track list:</strong>
+  <strong>収録楽曲:</strong>
   <%= @disco_box.track_list %>
 </p>
 
-<%= link_to 'Edit', edit_disco_box_path(@disco_box) %> |
-<%= link_to 'Back', disco_boxes_path %>
+<%= link_to '編集', edit_disco_box_path(@disco_box) %> |
+<%= link_to '戻る', disco_boxes_path %>

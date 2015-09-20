@@ -12,30 +12,26 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :title %><br>
+    タイトル
     <%= f.text_field :title %>
   </div>
   <div class="field">
-    <%= f.label :url %><br>
+    URL
     <%= f.text_area :url %>
   </div>
   <div class="field">
-    <%= f.label :jacket %><br>
-    <%= f.text_field :jacket %>
+    アートワーク
+    <%= f.file_field :jacket %>
   </div>
   <div class="field">
-    <%= f.label :icon_context_type %><br>
-    <%= f.text_field :icon_context_type %>
-  </div>
-  <div class="field">
-    <%= f.label :price %><br>
+    価格
     <%= f.number_field :price %>
   </div>
   <div class="field">
-    <%= f.label :track_list %><br>
+    収録楽曲
     <%= f.text_area :track_list %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit '登録' %>
   </div>
 <% end %>

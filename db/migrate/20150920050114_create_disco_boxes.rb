@@ -4,7 +4,6 @@ class CreateDiscoBoxes < ActiveRecord::Migration
       t.string :title
       t.text :url
       t.binary :jacket
-      t.string :icon_context_type
       t.integer :price
       t.text :track_list
 

@@ -12,6 +12,14 @@ class DiscoBoxesController < ApplicationController
   def show
   end
 
+  def show_image
+    @image = DiscoBox.find(params[:id])
+    send_data @image.jacket,
+              :filename => 'test.jpg',
+              :type => 'image/jpg',
+              :disposition => 'inline'
+  end
+
   # GET /disco_boxes/new
   def new
     @disco_box = DiscoBox.new
@@ -42,7 +50,7 @@ class DiscoBoxesController < ApplicationController
   def update
     respond_to do |format|
       if @disco_box.update(disco_box_params)
-        format.html { redirect_to @disco_box, notice: 'Disco box was successfully updated.' }
+        format.html { redirect_to @disco_box, notice: '正常に編集しました。' }
         format.json { render :show, status: :ok, location: @disco_box }
       else
         format.html { render :edit }
@@ -56,7 +64,7 @@ class DiscoBoxesController < ApplicationController
   def destroy
     @disco_box.destroy
     respond_to do |format|
-      format.html { redirect_to disco_boxes_url, notice: 'Disco box was successfully destroyed.' }
+      format.html { redirect_to disco_boxes_url, notice: '正常に削除しました。' }
       format.json { head :no_content }
     end
   end
@@ -69,6 +77,6 @@ class DiscoBoxesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def disco_box_params
-      params.require(:disco_box).permit(:title, :url, :jacket, :icon_context_type, :price, :track_list)
+      params.require(:disco_box).permit(:title, :url, :jacket, :price, :track_list)
     end
 end
