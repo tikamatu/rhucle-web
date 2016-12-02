@@ -29,8 +29,8 @@ test:
 production:
   adapter: mysql2
   encoding: utf8
-  username: sqale_fbae63edd4
-  password: 096fda060c05f0dcc1447ec9f227964cc7e006642352fdd2
-  database: sqale_fbae63edd4
-  host: mysql001.sqale.jp
+  username: b692b8e0be1f83
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+  database: heroku_792a51f2015ff4e
+  host: us-cdbr-iron-east-04.cleardb.net
 
