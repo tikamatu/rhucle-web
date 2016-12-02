@@ -1,0 +1,22 @@
+<div style="padding-top:70px;padding-bottom:30px;">
+  <table class="table table-striped" style="width:90%;margin:auto;" border="1">
+    <tr>
+      <td><strong>URL:</strong></td>
+      <td><a href=<%= @top_photo.url%> target="_blank"><%= @top_photo.url %></a></td>
+    </tr>
+
+    <tr>
+      <td><strong>Photo:</strong></td>
+      <td><%= image_tag @top_photo.photo.url, size:"300x300" %></td>
+    </tr>
+
+    <tr>
+      <td><strong>Order:</strong></td>
+      <td><%= @top_photo.order %></td>
+    </tr>
+  </table>
+</div>
+<div style="margin-bottom:50px;">
+  <%= link_to '編集', edit_admin_top_path(@top_photo) %> |
+  <%= link_to '戻る', admin_top_index_path %>
+</div>

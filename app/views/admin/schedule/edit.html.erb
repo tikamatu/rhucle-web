@@ -1,0 +1,7 @@
+<h1>Edit Schedule</h1>
+
+<%= simple_form_for [:admin, @event], wrapper: :horizontal_form, url: admin_schedule_path(@event), html: { class: 'form-horizontal', role: true } do |f| %>
+  <%= render partial: 'form', locals: { f: f } %>
+<% end %>
+<%= link_to 'Show', admin_schedule_path(@event) %> |
+<%= link_to 'Back', admin_schedule_path %>

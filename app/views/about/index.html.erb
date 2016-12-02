@@ -1,1 +1,10 @@
-about
+<div>
+  <h1 class="artist-name">Rhucle</h1>
+</div>
+<div class="artist-img">
+  <%= image_tag(@profile.photo.url, size: "600x600") %>
+</div>
+
+<div class="introduction">
+  <%= @profile.profile.html_safe %>
+</div>

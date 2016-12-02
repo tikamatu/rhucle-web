@@ -1,0 +1,21 @@
+<%- model_class = Disc -%>
+<div class="page-header">
+<h1><%= @type.blank? ? "ALL" : @type.type %></h1>
+<div class="row">
+<%= link_to("ALL", discography_path, method: :get, class: "btn-default btn-lg".concat(@type.blank? ? " active" : "")) %>
+<% ReleaseType.all.each do |type| %>
+  <%= link_to(type.type, discography_path(type: type.type), method: :get, class: "btn-default btn-lg".concat(@type == type ? " active" : "")) %>
+<% end %>
+</div>
+</div>
+<div id="masonry-container" style="min-height: 276px;">
+  <% @discs.each do |disc| %>
+    <div class="mas-box item">
+      <%= link_to [discography_path, disc.title].join("/") do %>
+        <%= image_tag disc.artwork.url, size: "208x208" %>
+      <% end %>
+      <div style="text-align:center;"><%= disc.title %></div>
+   </div>
+  <% end %>
+</div>
+

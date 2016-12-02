@@ -1,0 +1,12 @@
+<%= f.input :url %>
+<%= f.input :photo, input_html: { preview_version: :thumb } %>
+<% if f.object.persisted? %>
+  <%= f.input :order, collection: (1..TopPhoto.count).to_a, selected: f.object.order %>
+<% else %>
+  <%= f.input :order, collection: (1..TopPhoto.count + 1).to_a, selected: 1 %>
+<% end %>
+<div class="form-actions">
+    <%= f.button :submit, :class => 'btn-primary' %>
+    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+    admin_top_index_path, :class => 'btn' %>
+</div>

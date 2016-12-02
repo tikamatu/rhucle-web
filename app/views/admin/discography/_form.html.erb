@@ -1,0 +1,14 @@
+<%= f.input :title %>
+<%= f.input :released_on, as: :date_picker, input_html: { class: "datetimepicker" } %>
+<%= f.input :record_label %>
+<%= f.input :url %>
+<%= f.input :artworked_by %>
+<%= f.input :artwork, input_html: { preview_version: :thumb } %>
+<%= f.input :track_list %>
+<%= f.input :format, collection: FormatType.all, label_method: :type %>
+<%= f.input :release_type, collection: ReleaseType.all, label_method: :type %>
+<div class="form-actions">
+    <%= f.button :submit, :class => 'btn-primary' %>
+    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+    admin_discography_index_path, :class => 'btn' %>
+</div>

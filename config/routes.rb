@@ -1,10 +1,14 @@
 Rails.application.routes.draw do
   root 'top#index'
   get 'about' => 'about#index'
-  get 'disco_graphy' => 'disco_graphy#index'
-  get 'live' => 'live#index'
+  get 'discography' => 'discography#index'
+  get 'discography/:title' => 'discography#show'
+  get 'schedule' => 'schedule#index'
   namespace :admin do
-    resources :disco_boxes
+    resources :top
+    resources :about, only: [:show, :edit, :update]
+    resources :discography
+    resources :schedule
   end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

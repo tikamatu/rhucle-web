@@ -1,0 +1,20 @@
+// Place all the styles related to the disco_boxes controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+div.item {
+  float: left;
+  display: inline;
+  width: 208px;
+  margin: 0 0 50px 38px;
+}
+
+table.itemInfo {
+  width:500px;
+  margin:auto;
+  margin-top:25px;
+  td {
+    text-align: left;
+  }
+}
+
