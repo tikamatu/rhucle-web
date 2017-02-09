@@ -30,6 +30,8 @@ gem 'masonry-rails'
 gem 'bootstrap-sass', '~> 2.3.0.1'
 gem 'simple_form'
 gem 'bootstrap-datepicker-rails'
+gem 'rails_12factor', group: :production
+
 group :development, :test do
   gem 'annotate'
   gem 'pry'
