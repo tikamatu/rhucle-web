@@ -1,10 +1,5 @@
-<%= f.input :title %>
-<%= f.input :started_at, as: :datetime_picker, input_html: { class: "datetimepicker" } %>
-<%= f.input :venue %>
-<%= f.input :url %>
-<%= f.input :venue_url %>
-<%= f.input :ticket_info %>
-<%= f.input :performers %>
+<%= f.input :started_on, as: :date_picker, input_html: { class: "datetimepicker" } %>
+<%= f.input :detail %>
 <div class="form-actions">
     <%= f.button :submit, :class => 'btn-primary' %>
     <%= link_to t('.cancel', :default => t("helpers.links.cancel")),

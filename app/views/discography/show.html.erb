@@ -10,12 +10,20 @@
         <td><%= @disc.title %></td>
       </tr>
       <tr>
+        <td><strong>Artist</strong></td>
+        <td><%= @disc.artist %></td>
+      </tr>
+      <tr>
         <td><strong>Release date</strong></td>
-        <td><%= @disc.released_on %></td>
+        <td><%= @disc.released_on.strftime("%d/%m/%Y") %></td>
       </tr>
       <tr>
         <td><strong>Label</strong></td>
         <td><%= @disc.record_label %></td>
+      </tr>
+      <tr>
+        <td><strong>Catalog</strong></td>
+        <td><%= @disc.catalog %></td>
       </tr>
       <tr>
         <td><strong>Artwork by</strong></td>
@@ -23,15 +31,7 @@
       </tr>
       <tr>
         <td><strong>Format</strong></td>
-        <td><%= FormatType.find(@disc.format).type %></td>
-      </tr>
-      <tr>
-        <td><strong>Release Type</strong></td>
-        <td><%= ReleaseType.find(@disc.release_type).type %></td>
-      </tr>
-      <tr>
-        <td><strong>URL</strong></td>
-        <td><%= link_to @disc.url, @disc.url, { target: "_blank" } %></td>
+        <td><%= @disc.format %></td>
       </tr>
       <tr>
         <td><strong>Track List</strong></td>

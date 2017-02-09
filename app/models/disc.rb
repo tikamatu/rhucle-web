@@ -3,5 +3,4 @@ class Disc < ActiveRecord::Base
 
   validates :title, presence: true
   validates :format, presence: true
-  validates :release_type, presence: true
 end

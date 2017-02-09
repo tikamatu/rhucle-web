@@ -74,15 +74,16 @@ class Admin::DiscographyController < Admin::ApplicationController
       params
         .require(:disc)
         .permit(:title,
+                :artist,
                 :released_on,
                 :record_label,
                 :artworked_by,
                 :format,
+                :catalog,
                 :url,
                 :artwork,
                 :artwork_cache,
                 :remove_artwork,
-                :track_list,
-                :release_type)
+                :track_list)
     end
 end

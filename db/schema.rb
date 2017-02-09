@@ -22,28 +22,24 @@ ActiveRecord::Schema.define(version: 20150920050114) do
 
   create_table "discs", force: :cascade do |t|
     t.string   "title",        limit: 255,   null: false
+    t.text     "artist",       limit: 65535, null: false
     t.date     "released_on"
     t.string   "record_label", limit: 255
+    t.text     "catalog",      limit: 65535
     t.string   "artworked_by", limit: 255
-    t.string   "format",       limit: 255,   null: false
+    t.text     "format",       limit: 65535, null: false
     t.text     "url",          limit: 65535
     t.string   "artwork",      limit: 255
     t.text     "track_list",   limit: 65535
-    t.string   "release_type", limit: 255,   null: false
     t.datetime "created_at",                 null: false
     t.datetime "updated_at",                 null: false
   end
 
   create_table "events", force: :cascade do |t|
-    t.string   "title",       limit: 255,   null: false
-    t.datetime "started_at"
-    t.string   "venue",       limit: 255
-    t.string   "url",         limit: 255
-    t.string   "venue_url",   limit: 255
-    t.text     "ticket_info", limit: 65535
-    t.text     "performers",  limit: 65535
-    t.datetime "created_at",                null: false
-    t.datetime "updated_at",                null: false
+    t.datetime "started_on"
+    t.text     "detail",     limit: 65535
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
   end
 
   create_table "top_photos", force: :cascade do |t|
@@ -53,6 +49,12 @@ ActiveRecord::Schema.define(version: 20150920050114) do
     t.string   "photo",      limit: 255
     t.datetime "created_at",                            null: false
     t.datetime "updated_at",                            null: false
+  end
+
+  create_table "visual_arts", force: :cascade do |t|
+    t.string   "image",      limit: 255
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
   end
 
 end

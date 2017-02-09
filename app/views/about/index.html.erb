@@ -2,9 +2,9 @@
   <h1 class="artist-name">Rhucle</h1>
 </div>
 <div class="artist-img">
-  <%= image_tag(@profile.photo.url, size: "600x600") %>
+  <%= image_tag(@profile.photo.url, size: "300x300") %>
 </div>
 
-<div class="introduction">
+<div class="introduction" style="margin: 60px;">
   <%= @profile.profile.html_safe %>
 </div>

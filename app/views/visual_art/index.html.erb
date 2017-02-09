@@ -1,0 +1,8 @@
+<div id="masonry-container" style="min-height: 276px;">
+  <% @images.each do |image| %>
+    <div class="mas-box item">
+      <%= image_tag image.image.url, size: "208x208" %>
+    </div>   
+  <% end %>
+</div>
+

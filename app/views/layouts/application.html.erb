@@ -39,67 +39,70 @@
     $(window).load(function() {
       $('.flexslider').flexslider({
         slideshowSpeed: 5000,
-        animationSpeed: 2000
+        animationSpeed: 2000,
+        prevText: "",
+        nextText: ""
       });
     });
     </script>
   </head>
   <body>
 		<nav class="navbar" role="navigation">
-			<div class="container">
-				<div class="navbar-header">
-					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#top-navbar-1">
-						<span class="sr-only">Toggle navigation</span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-					<a class="navbar-brand" href="#"></a>
-				</div>
+			<div class="container" style="border-bottom: solid #ededec;">
+        <%= image_tag(image_url("logo.png"), style: "max-height: 150px; width: auto;") %>
 				<!-- Collect the nav links, forms, and other content for toggling -->
 				<div class="collapse navbar-collapse" id="top-navbar-1">
 					<ul class="nav navbar-nav navbar-right">
 						<li>
               <%= link_to root_path do %>
-                <i class="fa fa-home"></i><br>Home
+                Home
               <% end %>
 						</li>
             <li>
               <%= link_to about_path do %>
-							  <i class="fa fa-user"></i><br>About
+							  About
               <% end %>
 						</li>
 						<li>
               <%= link_to discography_path do %>
-							  <i class="fa fa-music"></i><br>DiscoGraphy
+							  DiscoGraphy
               <% end %>
 						</li>
 						<li>
               <%= link_to schedule_path do %>
-							  <i class="fa fa-calendar"></i><br>Schedule
+							  Schedule
+              <% end %>
+						</li>
+						<li>
+              <%= link_to visual_art_path do %>
+							  Visual Art
               <% end %>
 						</li>
 						<li class="dropdown">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="1000">
-								<i class="fa fa-envelope"></i><br>Contact <span class="caret"></span>
+								Links <span class="caret"></span>
 							</a>
 							<ul class="dropdown-menu" role="menu">
-                <li><a href="https://twitter.com/Rhucle" target="_blank"><i class="fa fa-twitter"></i> Twitter</a></li>
-                <li><a href="https://www.facebook.com/rhucle" target="_blank"><i class="fa fa-facebook"></i> Facebook</a></li>
-                <li><a href="https://soundcloud.com/rhucle-1" target="_blank"><i class="fa fa-soundcloud"></i> soundcloud</a></li>
-                <li><a href="https://www.youtube.com/channel/UC8ByyTWSZPEOzHaJYrV91Pw" target="_blank"><i class="fa fa-youtube"></i> YouTube</a></li>
+                <li><a href="https://www.facebook.com/rhucle" target="_blank">Facebook</a></li>
+                <li><a href="https://twitter.com/Rhucle" target="_blank">Twitter</a></li>
+                <li><a href="https://rhucle.bandcamp.com/" target="_blank">bandcamp</a></li>
+                <li><a href="https://soundcloud.com/rhucle-1" target="_blank">soundcloud</a></li>
+                <li><a href="https://www.instagram.com/rhucle/" target="_blank">Instagram</a></li>
+                <li><a href="https://www.youtube.com/channel/UC8ByyTWSZPEOzHaJYrV91Pw" target="_blank">YouTube</a></li>
 							</ul>
 						</li>
+            <li>
+              <%= mail_to("rhucle@gmail.com") do %>
+                Contact
+              <% end %>
+            </li>
 					</ul>
 				</div>
-			</div>
 		</nav>
     <div class="container" style="width:1022px;">
       <div class="row" style="text-align:center;">
-        <div style="background-color:white;">
-          <%= bootstrap_flash %>
-          <%= yield %>
-        </div>
+        <%= bootstrap_flash %>
+        <%= yield %>
       </div><!--/row-->
 
       <footer>

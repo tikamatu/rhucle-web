@@ -1,5 +1,8 @@
 class ScheduleController < ApplicationController
   def index
-    @live = Event.all.order("started_at")
+    @events = Event.all.order(started_on: :desc).each_with_object({}) do |event, h|
+      h[event.started_on.year] ||= []
+      h[event.started_on.year] << event
+    end
   end
 end

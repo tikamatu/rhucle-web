@@ -1,12 +1,7 @@
 class DiscographyController < ApplicationController
   before_action :set_disc, only: :show
   def index
-    @type = ReleaseType.find_by(type: params[:type])
-    if @type.blank?
-      @discs = Disc.all
-    else
-      @discs = Disc.where(release_type: @type.id).order("released_on DESC")
-    end
+    @discs = Disc.all.order("released_on DESC")
   end
 
   def show

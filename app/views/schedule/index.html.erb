@@ -1,1 +1,13 @@
-live
+<div>
+  <% (2013..Time.current.year+1).reverse_each do |year| %>
+    <div style="text-align:left; margin-left: 100px; padding-bottom: 5px;">
+    <h1><%= year %></h1>
+    <% (@events[year] || []).each do |event| %>
+      <div style="padding-left: 50px; font-size: 20px;">
+        <%= event.started_on.strftime("%m/%d") %>
+        <%= event.detail %>
+      </div>
+    <% end %>
+    </div>
+  <% end %>
+</div>

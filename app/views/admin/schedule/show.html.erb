@@ -1,38 +1,13 @@
 <div style="padding-top:70px;padding-bottom:30px;">
   <table class="table table-striped" style="width:90%;margin:auto;" border="1">
     <tr>
-      <td><strong>タイトル</strong></td>
-      <td><%= @event.title %></td>
-    </tr>
-
-    <tr>
       <td><strong>開始日時</strong></td>
-      <td><%= @event.started_at %></td>
+      <td><%= @event.started_on %></td>
     </tr>
 
     <tr>
-      <td><strong>会場</strong></td>
-      <td><%= @event.venue %></td>
-    </tr>
-
-    <tr>
-      <td><strong>イベントURL</strong></td>
-      <td><a href=<%= @event.url%> target="_blank"><%= @event.url %></a></td>
-    </tr>
-
-    <tr>
-      <td><strong>会場URL</strong></td>
-      <td><a href=<%= @event.venue_url%> target="_blank"><%= @event.venue_url %></a></td>
-    </tr>
-
-    <tr>
-      <td><strong>チケット情報</strong></td>
-      <td><%= simple_format(@event.ticket_info) %></td>
-    </tr>
-
-    <tr>
-      <td><strong>出演者</strong></td>
-      <td><%= simple_format(@event.performers) %></td>
+      <td><strong>詳細</strong></td>
+      <td><%= simple_format(@event.detail) %></td>
     </tr>
   </table>
 </div>
