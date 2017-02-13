@@ -3912,7 +3912,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .nav .open > a:hover,
 .nav .open > a:focus {
   background-color: #eee;
-  border-color: #ededec;
+  border-color: #ededec !important;
 }
 .nav .nav-divider {
   height: 1px;
