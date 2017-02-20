@@ -1,9 +1,9 @@
 <div>
-  <% (2013..Time.current.year+1).reverse_each do |year| %>
+  <% (2015..Time.current.year).reverse_each do |year| %>
     <div style="text-align:left; margin-left: 100px; padding-bottom: 5px;">
-    <h1><%= year %></h1>
+    <h3 style="margin-top:20px;"><%= year %></h3>
     <% (@events[year] || []).each do |event| %>
-      <div style="padding-left: 50px; font-size: 20px;">
+      <div style="padding-left: 50px; font-size: 15px;">
         <%= event.started_on.strftime("%m/%d") %>
         <%= event.detail %>
       </div>
