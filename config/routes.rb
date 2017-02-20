@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   root 'top#index'
   get 'about' => 'about#index'
   get 'discography' => 'discography#index'
-  get 'discography/:title' => 'discography#show'
+  get 'discography/:title' => 'discography#show', :title => /[^\s]+/ 
   get 'schedule' => 'schedule#index'
   get 'visual_art' => 'visual_art#index'
   namespace :admin do
