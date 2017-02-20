@@ -1,13 +1,13 @@
 Rails.application.routes.draw do
   root 'top#index'
-  get 'about' => 'about#index'
+  get 'biography' => 'biography#index'
   get 'discography' => 'discography#index'
   get 'discography/:title' => 'discography#show', :title => /[^\s]+/ 
   get 'schedule' => 'schedule#index'
   get 'visual_art' => 'visual_art#index'
   namespace :admin do
     resources :top
-    resources :about, only: [:show, :edit, :update]
+    resources :biography, only: [:show, :edit, :update]
     resources :discography
     resources :schedule
     resources :visual_art, only: [:index, :new, :create, :destroy]

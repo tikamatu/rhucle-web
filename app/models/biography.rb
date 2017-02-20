@@ -1,3 +1,3 @@
-class About < ActiveRecord::Base
+class Biography < ActiveRecord::Base
   mount_uploader :photo, ArtworkUploader
 end

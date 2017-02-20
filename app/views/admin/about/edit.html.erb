@@ -1,6 +1,0 @@
-<h1>Editing About</h1>
-
-<%= simple_form_for [:admin, @about], wrapper: :horizontal_form, url: admin_about_path(@about), html: { class: 'form-horizontal', role: true } do |f| %>
-  <%= render partial: 'form', locals: { f: f } %>
-<% end %>
-<%= link_to 'Back', admin_about_path(@about) %>

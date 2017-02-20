@@ -1,20 +1,20 @@
-<h1>About</h1>
+<h1>Biography</h1>
 
 <div style="padding-top:70px;padding-bottom:30px;">
   <table class="table table-striped" style="width:90%;margin:auto;" border="1">
     <tr>
-      <td><strong>アートワーク:</strong></td>
-      <td><%= image_tag @about.photo.url, size:"300x300" %></td>
+      <td><strong>artwork:</strong></td>
+      <td><%= image_tag @biography.photo.url, size:"300x300" %></td>
     </tr>
 
     <tr>
       <td><strong>profile:</strong></td>
-      <td><%= simple_format(@about.profile) %></td>
+      <td><%= simple_format(@biography.profile) %></td>
     </tr>
 
   </table>
 </div>
 
 <div style="margin-bottom:50px;">
-  <%= link_to '編集', edit_admin_about_path(@about) %>
+  <%= link_to 'edit', edit_admin_biography_path(@biography) %>
 </div>

@@ -9,7 +9,7 @@ create_table :top_photos, default_charset: "utf8mb4", collate: "utf8mb4_unicode_
   t.datetime :updated_at
 end
 
-create_table :abouts, default_charset: "utf8mb4", collate: "utf8mb4_unicode_ci", comment: "" do |t|
+create_table :biographys, default_charset: "utf8mb4", collate: "utf8mb4_unicode_ci", comment: "" do |t|
   t.int :id, primary_key: true, extra: "auto_increment"
   t.varchar :photo, null: true, comment: "写真"
   t.text :profile, null: true, comment: "プロフィール"
