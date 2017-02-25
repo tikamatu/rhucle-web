@@ -3,13 +3,21 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 @charset "utf-8";
 
+@font-face {
+    font-family: "Georgia";
+    src: url(/assets/fonts/Georgia.ttf) format("truetype");
+}
+
+.header {
+    font-family: "Georgia";
+}
+
 #box {
 margin: 0px 0px 30px 15px;
 width:100%;
 line-height:150%;
 font-size:10px;
 color: #333;
-font-family: "Verdana","sans-serif"; 
 }
 
 #sidebox {
@@ -18,7 +26,6 @@ width:200;
 line-height:150%;
 font-size:10px;
 color: #333;
-font-family: "Verdana","sans-serif"; 
 }
 
 #disco-box {
@@ -31,7 +38,6 @@ font-size:11px;
 line-height: 130%; 
 font-size:10px;
 color: #333;
-font-family: "Verdana","sans-serif"; 
 }
 
 
