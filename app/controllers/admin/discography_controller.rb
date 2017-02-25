@@ -81,9 +81,12 @@ class Admin::DiscographyController < Admin::ApplicationController
                 :format,
                 :catalog,
                 :url,
-                :artwork,
-                :artwork_cache,
-                :remove_artwork,
+                :artwork_thumb,
+                :artwork_thumb_cache,
+                :remove_artwork_thumb,
+                :artwork_full,
+                :artwork_full_cache,
+                :remove_artwork_full,
                 :track_list)
     end
 end

@@ -7,21 +7,21 @@
       <thead></thead>
       <tbody>
       <tr>
-        <td><strong>タイトル:</strong></td>
+        <td><strong>title:</strong></td>
         <td><%= @discography.title %></td>
       </tr>
 
       <tr>
-        <td><strong>アーティスト:</strong></td>
+        <td><strong>artist:</strong></td>
         <td><%= @discography.artist %></td>
       </tr>
       <tr>
-        <td><strong>リリース日:</strong></td>
+        <td><strong>released on:</strong></td>
         <td><%= @discography.released_on %></td>
       </tr>
 
       <tr>
-        <td><strong>レーベル:</strong></td>
+        <td><strong>label:</strong></td>
         <td><%= @discography.record_label %></td>
       </tr>
 
@@ -31,12 +31,12 @@
       </tr>
 
       <tr>
-        <td><strong>フォーマット:</strong></td>
+        <td><strong>format:</strong></td>
         <td><%= @discography.format %></td>
       </tr>
 
       <tr>
-        <td><strong>カタログ:</strong></td>
+        <td><strong>catalog:</strong></td>
         <td><%= @discography.catalog %></td>
       </tr>
       <tr>
@@ -45,16 +45,23 @@
       </tr>
 
       <tr>
-        <td><strong>アートワーク:</strong></td>
+        <td><strong>thumbnail:</strong></td>
         <td>
-        <% if @discography.artwork? %>
-          <%= image_tag @discography.artwork.url, size:"300x300" %>
-        <% end %>
+          <%= image_tag @discography.artwork_thumb.url, size:"300x300" %>
         </td>
       </tr>
 
+      <% if @discography.artwork_full? %>
+        <tr>
+          <td><strong>artwork:</strong></td>
+          <td>
+            <%= image_tag @discography.artwork_full.url %>
+          </td>
+        </tr>
+      <% end %>
+
       <tr>
-        <td><strong>収録楽曲:</strong></td>
+        <td><strong>track list:</strong></td>
         <td><%= simple_format(@discography.track_list) %></td>
       </tr>
 

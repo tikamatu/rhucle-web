@@ -3,7 +3,7 @@
   <% @discs.each do |disc| %>
     <div class="mas-box item">
       <%= link_to [discography_path, disc.title].join("/") do %>
-        <%= image_tag disc.artwork.url, size: "208x208" %>
+        <%= image_tag disc.artwork_thumb.url, size: "208x208" %>
       <% end %>
       <div style="text-align:center;"><%= disc.title %></div>
    </div>

@@ -1,7 +1,5 @@
 <div style="text-align:center;padding:25px;">
-  <% if @disc.artwork? %>
-    <%= link_to image_tag(@disc.artwork.url, size: "300x300"), @disc.url, { target: "_blank" } %>
-  <% end %>
+  <%= link_to image_tag(@disc.artwork_full? ? @disc.artwork_full.url : @disc.artwork_thumb.url), @disc.url, { target: "_blank" } %>
 
   <div style="margin-top: 20px;">
     <%= button_to("Buy Now", @disc.url, class: 'btn btn-primary', style: "font-size:15px;", form: { target: "_blank" } ) %>

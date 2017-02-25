@@ -21,23 +21,24 @@ ActiveRecord::Schema.define(version: 0) do
   end
 
   create_table "discs", force: :cascade do |t|
-    t.string   "title",        limit: 255,   null: false
-    t.text     "artist",       limit: 65535, null: false
-    t.date     "released_on"
-    t.string   "record_label", limit: 255
-    t.text     "catalog",      limit: 65535
-    t.string   "artworked_by", limit: 255
-    t.text     "format",       limit: 65535, null: false
-    t.text     "url",          limit: 65535
-    t.string   "artwork",      limit: 255
-    t.text     "track_list",   limit: 65535
-    t.datetime "created_at",                 null: false
-    t.datetime "updated_at",                 null: false
+    t.string   "title",         limit: 255,   null: false
+    t.text     "artist",        limit: 65535, null: false
+    t.date     "released_on",                 null: false
+    t.string   "record_label",  limit: 255,   null: false
+    t.text     "catalog",       limit: 65535
+    t.string   "artworked_by",  limit: 255,   null: false
+    t.text     "format",        limit: 65535, null: false
+    t.text     "url",           limit: 65535, null: false
+    t.string   "artwork_thumb", limit: 255,   null: false
+    t.string   "artwork_full",  limit: 255
+    t.text     "track_list",    limit: 65535, null: false
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
   end
 
   create_table "events", force: :cascade do |t|
-    t.datetime "started_on"
-    t.text     "detail",     limit: 65535
+    t.datetime "started_on",               null: false
+    t.text     "detail",     limit: 65535, null: false
     t.datetime "created_at",               null: false
     t.datetime "updated_at",               null: false
   end
@@ -46,13 +47,13 @@ ActiveRecord::Schema.define(version: 0) do
     t.integer  "order",      limit: 4,                  null: false
     t.boolean  "active",     limit: 1,   default: true, null: false
     t.string   "url",        limit: 255
-    t.string   "photo",      limit: 255
+    t.string   "photo",      limit: 255,                null: false
     t.datetime "created_at",                            null: false
     t.datetime "updated_at",                            null: false
   end
 
   create_table "visual_arts", force: :cascade do |t|
-    t.string   "image",      limit: 255
+    t.string   "image",      limit: 255, null: false
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
   end
