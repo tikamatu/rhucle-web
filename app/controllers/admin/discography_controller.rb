@@ -20,7 +20,8 @@ class Admin::DiscographyController < Admin::ApplicationController
 
   # GET /discography/1/edit
   def edit
-    @discography.artwork.cache! unless @discography.artwork.blank?
+    @discography.artwork_thumb.cache! if @discography.artwork_thumb.present?
+    @discography.artwork_full.cache! if @discography.artwork_full.present?
   end
 
   # POST /discography
