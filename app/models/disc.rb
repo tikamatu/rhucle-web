@@ -11,6 +11,7 @@
 #  artworked_by  :string(255)      not null
 #  format        :text(65535)      not null
 #  url           :text(65535)      not null
+#  listening_url :text(65535)
 #  artwork_thumb :string(255)      not null
 #  artwork_full  :string(255)
 #  track_list    :text(65535)      not null

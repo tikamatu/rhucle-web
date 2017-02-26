@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(version: 0) do
     t.string   "artworked_by",  limit: 255,   null: false
     t.text     "format",        limit: 65535, null: false
     t.text     "url",           limit: 65535, null: false
+    t.text     "listening_url", limit: 65535
     t.string   "artwork_thumb", limit: 255,   null: false
     t.string   "artwork_full",  limit: 255
     t.text     "track_list",    limit: 65535, null: false

@@ -81,6 +81,7 @@ class Admin::DiscographyController < Admin::ApplicationController
                 :format,
                 :catalog,
                 :url,
+                :listening_url,
                 :artwork_thumb,
                 :artwork_thumb_cache,
                 :remove_artwork_thumb,

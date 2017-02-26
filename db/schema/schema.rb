@@ -28,6 +28,7 @@ create_table :discs, default_charset: "utf8mb4", collate: "utf8mb4_unicode_ci", 
   t.varchar :artworked_by, comment: "アートワーク作成者"
   t.text :format, comment: "フォーマット"
   t.text :url, comment: "リリース先URL"
+  t.text :listening_url, null: true, comment: "試聴先URL"
   t.varchar :artwork_thumb, comment: "サムネイル"
   t.varchar :artwork_full, null: true, comment: "アートワーク"
   t.text :track_list, comment: "収録楽曲"
