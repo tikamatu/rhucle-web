@@ -52,6 +52,7 @@ GEM
       activerecord (>= 3.2, < 6.0)
       rake (>= 10.4, < 12.0)
     arel (6.0.3)
+    bcrypt (3.1.11)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
     bootstrap-datepicker-rails (1.6.4.1)
@@ -83,6 +84,12 @@ GEM
       mysql2
       slop (~> 3.6)
     debug_inspector (0.0.2)
+    devise (4.2.0)
+      bcrypt (~> 3.0)
+      orm_adapter (~> 0.1)
+      railties (>= 4.1.0, < 5.1)
+      responders
+      warden (~> 1.2.3)
     diff-lcs (1.2.5)
     diffy (3.1.0)
     draper (2.1.0)
@@ -269,6 +276,7 @@ GEM
     nokogiri (1.6.8)
       mini_portile2 (~> 2.1.0)
       pkg-config (~> 1.1.7)
+    orm_adapter (0.5.0)
     pkg-config (1.1.7)
     pry (0.10.4)
       coderay (~> 1.1.0)
@@ -325,6 +333,8 @@ GEM
       json (~> 1.4)
     ref (2.0.0)
     request_store (1.3.1)
+    responders (2.3.0)
+      railties (>= 4.2.0, < 5.1)
     rmagick (2.16.0)
     sass (3.4.22)
     sass-rails (5.0.6)
@@ -370,6 +380,8 @@ GEM
     unicorn (5.1.0)
       kgio (~> 2.6)
       raindrops (~> 0.7)
+    warden (1.2.7)
+      rack (>= 1.0)
     web-console (2.3.0)
       activemodel (>= 4.0)
       binding_of_caller (>= 0.7.2)
@@ -392,6 +404,7 @@ DEPENDENCIES
   coffee-rails (~> 4.1.0)
   convergence
   datetimepicker-rails!
+  devise
   draper
   email_validator
   fog
@@ -422,4 +435,4 @@ DEPENDENCIES
   web-console (~> 2.0)
 
 BUNDLED WITH
-   1.13.1
+   1.14.3

@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  devise_for :admins, skip: [:registrations]
+  as :admins do
+    get 'admins/edit' => 'devise/registrations#edit', :as => 'edit_admin_registration'
+    put 'admins' => 'devise/registrations#update', :as => 'admin_registration'
+  end
   root 'top#index'
   get 'biography' => 'biography#index'
   get 'discography' => 'discography#index'

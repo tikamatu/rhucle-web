@@ -31,6 +31,7 @@ gem 'bootstrap-sass', '~> 2.3.0.1'
 gem 'simple_form'
 gem 'bootstrap-datepicker-rails'
 gem 'rails_12factor', group: :production
+gem 'devise'
 
 group :development, :test do
   gem 'annotate'

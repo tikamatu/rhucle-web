@@ -40,15 +40,10 @@
 
     <div class="navbar navbar-default navbar-static-top">
       <div class="container">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a href="#">RhucleOfficialAdmin</a>
-        <div class="navbar-collapse collapse navbar-responsive-collapse">
-          <ul class="nav navbar-nav">
-          </ul>
+        <h1>RhucleOfficialAdmin</h1>
+        <div class="navbar-collapse collapse navbar-responsive-collapse", style="float: right;">
+	  Logged in as <%= current_admin.try(:email) %>.
+	  <%= link_to "Logout", destroy_admin_session_path, method: :delete, :class => "navbar-link" %>
         </div>
       </div>
     </div>

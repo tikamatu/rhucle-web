@@ -54,6 +54,27 @@ create_table :visual_arts, default_charset: "utf8mb4", collate: "utf8mb4_unicode
   t.datetime :updated_at
 end
 
+create_table :admins, default_charset: "utf8mb4", collate: "utf8mb4_unicode_ci", comment: ""  do |t|
+  ## Database authenticatable 
+  t.int :id, primary_key: true, extra: "auto_increment"
+  t.varchar :email,              null: false, default: ""                
+  t.varchar :encrypted_password, null: false, default: ""                
+
+  ## Recoverable
+  t.varchar  :reset_password_token, null: true
+  t.datetime :reset_password_sent_at, null: true                          
+
+  ## Rememberable
+  t.datetime :remember_created_at, null: true                        
+								    
+  ## Trackable
+  t.int  :sign_in_count, default: 0, null: false                    
+  t.datetime :current_sign_in_at, null: true
+  t.datetime :last_sign_in_at, null: true
+  t.varchar   :current_sign_in_ip, null: true 
+  t.varchar   :last_sign_in_ip, null: true                                      
+end
+
 create_table :schema_migrations, default_charset: "utf8mb4", collate: "utf8mb4_unicode_ci", comment: "" do |t|
   t.varchar "version", limit: 191
 
