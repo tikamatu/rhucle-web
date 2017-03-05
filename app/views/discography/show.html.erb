@@ -1,8 +1,10 @@
 <div style="text-align:center;padding:25px;">
   <%= link_to image_tag(@disc.artwork_full? ? @disc.artwork_full.url : @disc.artwork_thumb.url), @disc.url, { class: "artwork-full", target: "_blank" } %>
 
-  <%= link_to image_tag("listen.png", size: "100x100"), @disc.listening_url.present? ? @disc.listening_url : @disc.url, class: "listenicon", target: "_blank" %>
-  <%= link_to image_tag("buy.png", size: "100x100"), @disc.url, class: "buyicon", target: "_blank" %>
+  <div style="margin-top:20px;">
+    <%= link_to image_tag("listen.png", size: "50x50"), @disc.listening_url.present? ? @disc.listening_url : @disc.url, class: "listenicon", target: "_blank" %>
+    <%= link_to image_tag("buy.png", size: "50x50"), @disc.url, class: "buyicon", target: "_blank" %>
+  </div>
   <table class="table table-striped itemInfo">
     <tbody>
       <tr>
