@@ -88,6 +88,7 @@ Rails.application.configure do
     :password => ENV["auth_gmail_paasword"],
     :authentication => :plain,
     :domain         => 'heroku.com',
-    :enable_starttls_auto => true
+    :enable_starttls_auto => true,
+    :secret => Rails.application.secrets[:secret_key_base]
   }
 end
