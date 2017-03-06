@@ -32,6 +32,7 @@ gem 'simple_form'
 gem 'bootstrap-datepicker-rails'
 gem 'rails_12factor', group: :production
 gem 'devise'
+gem 'sendgrid-ruby'
 
 group :development, :test do
   gem 'annotate'
