@@ -4,8 +4,8 @@
     <h3 style="margin-top:20px;"><%= year %></h3>
     <% (@events[year] || []).each do |event| %>
       <div style="padding-left: 50px; font-size: 15px;">
-        <div><%= event.started_on.strftime("%m/%d") %></div>
-        <div style="padding-left:10px;"><%= event.detail %></div>
+        <div style="float:left; margin-right: 10px;"><%= event.started_on.strftime("%m/%d") %></div>
+        <div><%= event.detail %></div>
       </div>
     <% end %>
     </div>
