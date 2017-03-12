@@ -1,5 +1,4 @@
 class Admin::ScheduleController < Admin::ApplicationController
-  layout 'admin_application'
   before_action :set_event, only: [:show, :edit, :update, :destroy]
 
   # GET /schedule

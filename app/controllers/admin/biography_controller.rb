@@ -1,5 +1,4 @@
 class Admin::BiographyController < Admin::ApplicationController
-  layout 'admin_application'
   before_action :set_biography, only: [:show, :edit, :update]
 
   # GET /biography/1

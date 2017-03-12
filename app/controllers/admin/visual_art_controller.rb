@@ -1,5 +1,4 @@
 class Admin::VisualArtController < Admin::ApplicationController
-  layout 'admin_application'
   before_action :set_image, only: [:destroy]
 
   # GET /image

@@ -1,5 +1,4 @@
 class Admin::DiscographyController < Admin::ApplicationController
-  layout 'admin_application'
   before_action :set_discography, only: [:show, :edit, :update, :destroy]
 
   # GET /discography

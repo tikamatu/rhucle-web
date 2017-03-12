@@ -4,6 +4,7 @@ class Admin::ApplicationController < ApplicationController
   before_action :authenticate_admin!
   protect_from_forgery with: :exception
   before_action :auth!
+  layout 'admin_application'
 
   def auth!
     redirect_to new_admin_session unless current_admin

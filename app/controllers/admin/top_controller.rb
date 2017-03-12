@@ -1,5 +1,4 @@
 class Admin::TopController < Admin::ApplicationController
-  layout 'admin_application'
   before_action :set_top_photo, only: [:show, :edit, :update, :destroy]
 
   # GET /top_photo
