@@ -34,6 +34,12 @@ gem 'rails_12factor', group: :production
 gem 'devise'
 gem 'sendgrid-ruby'
 
+gem 'rb-readline'
+gem 'capistrano'
+gem 'capistrano-rails'
+gem 'capistrano-bundler'
+gem 'capistrano-rbenv', github: "capistrano/rbenv"
+
 group :development, :test do
   gem 'annotate'
   gem 'pry'
