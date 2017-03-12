@@ -31,7 +31,7 @@ user: 'root',
 roles: %w{web app db},
 ssh_options: {
  auth_methods: %w(password),
- password: '${SAKURA_PASS}
+ password: '${SAKURA_PASS}'
 }
 
 
