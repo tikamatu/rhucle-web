@@ -3,7 +3,8 @@ lock "3.8.0"
 
 set :application, "rhucle-web"
 set :repo_url, "https://git.heroku.com/rhucle-web.git"
-
+set :git_https_username, ENV["EMAIL_ADDRESS"]
+set :git_https_password, ENV["HEROKU_PASS"]
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 

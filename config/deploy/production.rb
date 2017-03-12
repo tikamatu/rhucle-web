@@ -22,16 +22,16 @@
 # role :db,  %w{deploy@example.com}
 set :production
 
-role :app, %w{root@153.126.177.207}
-role :web, %w{root@153.126.177.207}
-role :db, %w{root@153.126.177.207}
+role :app, %w{root@#{ENV["IP_ADDRESS"]}}
+role :web, %w{root@#{ENV["IP_ADDRESS"]}}
+role :db, %w{root@#{ENV["IP_ADDRESS"]}}
 
-server '153.126.177.207',
+server ENV["IP_ADDRESS"],
 user: 'root',
 roles: %w{web app db},
 ssh_options: {
  auth_methods: %w(password),
- password: 'hirakegoma2015'
+ password: ENV["SAKURA_PASS"]
 }
 
 
