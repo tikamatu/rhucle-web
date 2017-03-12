@@ -113,6 +113,10 @@ GEM
       warden (~> 1.2.3)
     diff-lcs (1.2.5)
     diffy (3.1.0)
+    dotenv (2.2.0)
+    dotenv-rails (2.2.0)
+      dotenv (= 2.2.0)
+      railties (>= 3.2, < 5.1)
     draper (2.1.0)
       actionpack (>= 3.0)
       activemodel (>= 3.0)
@@ -440,6 +444,7 @@ DEPENDENCIES
   convergence
   datetimepicker-rails!
   devise
+  dotenv-rails
   draper
   email_validator
   fog

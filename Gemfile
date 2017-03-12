@@ -39,6 +39,7 @@ gem 'capistrano'
 gem 'capistrano-rails'
 gem 'capistrano-bundler'
 gem 'capistrano-rbenv', github: "capistrano/rbenv"
+gem 'dotenv-rails'
 
 group :development, :test do
   gem 'annotate'
