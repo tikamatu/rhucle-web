@@ -22,9 +22,9 @@
 # role :db,  %w{deploy@example.com}
 set :production
 
-role :app, %w{root@#{ENV["IP_ADDRESS"]}}
-role :web, %w{root@#{ENV["IP_ADDRESS"]}}
-role :db, %w{root@#{ENV["IP_ADDRESS"]}}
+role :app, ["root@#{ENV["IP_ADDRESS"]}"]
+role :web, ["root@#{ENV["IP_ADDRESS"]}"]
+role :db, ["root@#{ENV["IP_ADDRESS"]}"]
 
 server ENV["IP_ADDRESS"],
 user: 'root',
