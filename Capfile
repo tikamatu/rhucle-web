@@ -8,7 +8,6 @@ set :rbenv_ruby, '2.2.2'
 require 'capistrano/bundler'
 require 'capistrano/rails/assets'
 require 'capistrano/rails/migrations'
-require 'capistrano/git_copy'
-install_plugin Capistrano::GitCopy::SCM
-
+require "capistrano/scm/git"
+install_plugin Capistrano::SCM::Git
 Dir.glob('lib/capistrano/tasks/*.cap').each { |r| import r }
