@@ -1,5 +1,5 @@
 <div>
-  <% (2015..([@events.keys.max, Time.current.year].max)).reverse_each do |year| %>
+  <% (2015..([@events.keys.max, Time.current.year].compact.max)).reverse_each do |year| %>
     <div style="text-align:left; margin-left: 100px; padding-bottom: 5px;">
     <h3 style="margin-top:20px;"><%= year %></h3>
     <% (@events[year] || []).each do |event| %>
