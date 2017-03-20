@@ -381,6 +381,8 @@ GEM
     simple_form (3.3.1)
       actionpack (> 4, < 5.1)
       activemodel (> 4, < 5.1)
+    sitemap_generator (5.3.1)
+      builder (~> 3.0)
     slop (3.6.0)
     spring (1.7.2)
     sprockets (3.7.0)
@@ -468,6 +470,7 @@ DEPENDENCIES
   sdoc (~> 0.4.0)
   sendgrid-ruby
   simple_form
+  sitemap_generator
   spring
   therubyracer
   turbolinks
