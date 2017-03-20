@@ -34,7 +34,7 @@ class Admin::TopController < Admin::ApplicationController
           photo.order = photo.order + 1
           photo.save
         end
-        format.html { redirect_to admin_top_path(@top_photo), notice: 'TopPhotoo box was successfully created.' }
+        format.html { redirect_to admin_top_path(@top_photo), notice: 'TopPhoto was successfully created.' }
         format.json { render :show, status: :created, location: @top_photo }
       else
         format.html { render :new }
@@ -53,7 +53,7 @@ class Admin::TopController < Admin::ApplicationController
           photo.order = photo.order + 1
           photo.save
         end
-        format.html { redirect_to admin_top_path(@top_photo), notice: '正常に編集しました。' }
+        format.html { redirect_to admin_top_path(@top_photo), notice: 'Top Photo was successfully edited.' }
         format.json { render :show, status: :ok, location: @top_photo }
       else
         format.html { render :edit }
@@ -72,7 +72,7 @@ class Admin::TopController < Admin::ApplicationController
       photo.save
     end
     respond_to do |format|
-      format.html { redirect_to admin_top_index_url, notice: '正常に削除しました。' }
+      format.html { redirect_to admin_top_index_url, notice: 'Top Photo was successfully deleted.' }
       format.json { head :no_content }
     end
   end

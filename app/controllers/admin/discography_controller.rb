@@ -30,7 +30,7 @@ class Admin::DiscographyController < Admin::ApplicationController
 
     respond_to do |format|
       if @discography.save
-        format.html { redirect_to admin_discography_path(@discography), notice: 'Disco box was successfully created.' }
+        format.html { redirect_to admin_discography_path(@discography), notice: 'Discography was successfully created.' }
         format.json { render :show, status: :created, location: @discography }
       else
         format.html { render :new }
@@ -44,7 +44,7 @@ class Admin::DiscographyController < Admin::ApplicationController
   def update
     respond_to do |format|
       if @discography.update(discography_params)
-        format.html { redirect_to admin_discography_path(@discography), notice: '正常に編集しました。' }
+        format.html { redirect_to admin_discography_path(@discography), notice: 'Discography was successfully edited.' }
         format.json { render :show, status: :ok, location: @discography }
       else
         format.html { render :edit }
@@ -58,7 +58,7 @@ class Admin::DiscographyController < Admin::ApplicationController
   def destroy
     @discography.destroy
     respond_to do |format|
-      format.html { redirect_to admin_discography_url, notice: '正常に削除しました。' }
+      format.html { redirect_to admin_discography_url, notice: 'Discography was successfully deleted.' }
       format.json { head :no_content }
     end
   end

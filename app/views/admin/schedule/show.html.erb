@@ -1,18 +1,18 @@
 <div style="padding-top:70px;padding-bottom:30px;">
   <table class="table table-striped" style="width:90%;margin:auto;" border="1">
     <tr>
-      <td><strong>開始日時</strong></td>
+      <td><strong>Date</strong></td>
       <td><%= @event.started_on %></td>
     </tr>
 
     <tr>
-      <td><strong>詳細</strong></td>
+      <td><strong>Detail</strong></td>
       <td><%= simple_format(@event.detail) %></td>
     </tr>
   </table>
 </div>
 
 <div style="margin-bottom:50px;">
-  <%= link_to '編集', edit_admin_schedule_path(@event) %> |
-  <%= link_to '戻る', admin_schedule_index_path %>
+  <%= link_to 'edit', edit_admin_schedule_path(@event) %> |
+  <%= link_to 'back', admin_schedule_index_path %>
 </div>

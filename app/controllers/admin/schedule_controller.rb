@@ -28,7 +28,7 @@ class Admin::ScheduleController < Admin::ApplicationController
 
     respond_to do |format|
       if @event.save
-        format.html { redirect_to admin_schedule_path(@event), notice: 'Event box was successfully created.' }
+        format.html { redirect_to admin_schedule_path(@event), notice: 'Schedule was successfully created.' }
         format.json { render :show, status: :created, location: @event }
       else
         format.html { render :new }
@@ -42,7 +42,7 @@ class Admin::ScheduleController < Admin::ApplicationController
   def update
     respond_to do |format|
       if @event.update(event_params)
-        format.html { redirect_to admin_schedule_path(@event), notice: '正常に編集しました。' }
+        format.html { redirect_to admin_schedule_path(@event), notice: 'Schedule was successfully edited.' }
         format.json { render :show, status: :ok, location: @event }
       else
         format.html { render :edit }
@@ -56,7 +56,7 @@ class Admin::ScheduleController < Admin::ApplicationController
   def destroy
     @event.destroy
     respond_to do |format|
-      format.html { redirect_to admin_schedule_url, notice: '正常に削除しました。' }
+      format.html { redirect_to admin_schedule_url, notice: 'Schedule was successfully deleted.' }
       format.json { head :no_content }
     end
   end
