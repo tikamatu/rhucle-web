@@ -9,13 +9,13 @@ Rails.application.routes.draw do
   get 'discography' => 'discography#index'
   get 'discography/:title' => 'discography#show', :title => /[^\s]+/ 
   get 'schedule' => 'schedule#index'
-  get 'visual_art' => 'visual_art#index'
+  get 'gallery' => 'gallery#index'
   namespace :admin do
     resources :top
     resources :biography, only: [:show, :edit, :update]
     resources :discography
     resources :schedule
-    resources :visual_art, only: [:index, :new, :create, :destroy]
+    resources :gallery, only: [:index, :new, :create, :destroy]
   end
   get '*path', controller: 'application', action: 'render_404'
   # The priority is based upon order of creation: first created -> highest priority.

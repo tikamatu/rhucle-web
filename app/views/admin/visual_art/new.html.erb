@@ -1,8 +1,0 @@
-<div style="text-align:center;" >
-<h1>新規作成</h1>
-
-<%= simple_form_for [:admin, @image], wrapper: :horizontal_form, url: admin_visual_art_index_path, html: { class: 'form-horizontal', role: true } do |f| %>
-  <%= render partial: 'form', locals: { f: f } %>
-<% end %>
-<%= link_to '戻る', admin_visual_art_index_path %>
-</div>

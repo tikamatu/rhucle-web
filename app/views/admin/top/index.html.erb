@@ -7,8 +7,8 @@
         <td><%= photo.order %></td>
         <td><%= image_tag photo.photo.url, size:"150x150" %></td>
         <td><a href=<%= photo.url %> target="_blank"><%= photo.url %></a></td>
-        <td><%= link_to '編集', edit_admin_top_path(photo) %></td>
-        <td><%= link_to '削除', admin_top_path(photo), method: :delete, data: { confirm: '本当に削除しますか？データの復旧はできません。' } %></td>
+        <td><%= link_to 'Edit', edit_admin_top_path(photo) %></td>
+        <td><%= link_to 'Delete', admin_top_path(photo), method: :delete, data: { confirm: 'sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -16,4 +16,4 @@
 
 <br>
 
-<%= link_to '新規作成', new_admin_top_path %>
+<%= link_to 'New', new_admin_top_path %>

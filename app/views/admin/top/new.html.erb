@@ -1,8 +1,8 @@
 <div style="text-align:center;" >
-<h1>新規作成</h1>
+<h1>New Top Photo</h1>
 
 <%= simple_form_for [:admin, @top_photo], wrapper: :horizontal_form, url: admin_top_index_path, html: { class: 'form-horizontal', role: true } do |f| %>
   <%= render partial: 'form', locals: { f: f } %>
 <% end %>
-<%= link_to '戻る', admin_top_index_path %>
+<%= link_to 'Back', admin_top_index_path %>
 </div>

@@ -1,4 +1,4 @@
-class Admin::VisualArtController < Admin::ApplicationController
+class Admin::GalleryController < Admin::ApplicationController
   before_action :set_image, only: [:destroy]
 
   # GET /image
@@ -19,7 +19,7 @@ class Admin::VisualArtController < Admin::ApplicationController
 
     respond_to do |format|
       if @image.save
-        format.html { redirect_to admin_visual_art_index_path, notice: 'VisualArto box was successfully created.' }
+        format.html { redirect_to admin_gallery_index_path, notice: 'gallery was successfully created.' }
         format.json { render :show, status: :created, location: @image }
       else
         format.html { render :new }
@@ -33,7 +33,7 @@ class Admin::VisualArtController < Admin::ApplicationController
   def destroy
     @image.destroy
     respond_to do |format|
-      format.html { redirect_to admin_visual_art_index_url, notice: '正常に削除しました。' }
+      format.html { redirect_to admin_gallery_index_url, notice: 'gallery was successfully deleted.' }
       format.json { head :no_content }
     end
   end
