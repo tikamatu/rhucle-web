@@ -7,7 +7,6 @@ class ArtworkUploader < CarrierWave::Uploader::Base
   # include CarrierWave::MiniMagick
 
   # Choose what kind of storage to use for this uploader:
-  storage :fog
 
   # Override the directory where uploaded files will be stored.
   # This is a sensible default for uploaders that are meant to be mounted:
@@ -15,6 +14,9 @@ class ArtworkUploader < CarrierWave::Uploader::Base
     "uploads"
   end
 
+  def cache_dir
+    '/tmp/cache'
+  end
   # Provide a default URL as a default if there hasn't been a file uploaded:
   # def default_url
   #   # For Rails 3.1+ asset pipeline compatibility:
