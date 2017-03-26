@@ -1,11 +1,11 @@
 <%- model_class = Disc -%>
-<div id="masonry-container" style="min-height: 276px;">
+<div id="masonry-container" class="discContainer">
   <% @discs.each do |disc| %>
     <div class="mas-box item">
       <%= link_to [discography_path, disc.title].join("/") do %>
         <%= image_tag disc.artwork_thumb.url, size: "208x208" %>
       <% end %>
-      <div style="text-align:center;"><%= disc.title %></div>
+      <div class="discTitle"><%= disc.title %></div>
    </div>
   <% end %>
 </div>
