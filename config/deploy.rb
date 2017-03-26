@@ -2,9 +2,7 @@
 lock "3.8.0"
 
 set :application, "rhucle-web"
-set :repo_url, "https://git.heroku.com/rhucle-web.git"
-set :git_https_username, ENV["EMAIL_ADDRESS"]
-set :git_https_password, ENV["HEROKU_PASS"]
+set :repo_url, "https://github.com/tikamatu/rhucle-web"
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 
@@ -33,7 +31,8 @@ set :pty, true
 
 # Default value for default_env is {}
 # set :default_env, { path: "/opt/ruby/bin:$PATH" }
-
+set :whenever_command, "bundle exec whenever"
+require "whenever/capistrano"
 # Default value for keep_releases is 5
 # set :keep_releases, 5
 namespace :deploy do

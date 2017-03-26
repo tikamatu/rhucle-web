@@ -41,6 +41,7 @@ gem 'capistrano-bundler'
 gem 'capistrano-rbenv', github: "capistrano/rbenv"
 gem 'dotenv-rails'
 gem 'sitemap_generator'
+gem 'whenever', :require => false
 
 group :development, :test do
   gem 'annotate'
