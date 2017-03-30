@@ -49,6 +49,7 @@ end
 create_table :visual_arts, default_charset: "utf8mb4", collate: "utf8mb4_unicode_ci", comment: "" do |t|
   t.int :id, primary_key: true, extra: "auto_increment"
   t.varchar :image, comment: "画像"
+  t.datetime :designed_at, null: true
 
   t.datetime :created_at
   t.datetime :updated_at

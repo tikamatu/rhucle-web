@@ -4,7 +4,7 @@ class Admin::DiscographyController < Admin::ApplicationController
   # GET /discography
   # GET /discography.json
   def index
-    @discographys = Disc.all
+    @discographys = Disc.all.order(released_at: :desc)
   end
 
   # GET /discography/1

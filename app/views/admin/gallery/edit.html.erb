@@ -1,0 +1,8 @@
+<div class="panel-heading">
+  <h3 class="panel-title">Editing Gallery</h3>
+</div>
+<div class="panel-body">
+<%= simple_form_for [:admin, @image], wrapper: :horizontal_form, url: admin_gallery_path(@image), html: { class: 'form-horizontal', role: true } do |f| %>
+  <%= render partial: 'form', locals: { f: f } %>
+<% end %>
+</div>

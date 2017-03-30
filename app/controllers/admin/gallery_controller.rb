@@ -1,15 +1,19 @@
 class Admin::GalleryController < Admin::ApplicationController
-  before_action :set_image, only: [:destroy]
+  before_action :set_image, only: [:edit, :update, :destroy]
 
   # GET /image
   # GET /image.json
   def index
-    @images = VisualArt.all.order(created_at: :desc)
+    @images = VisualArt.all.order(designed_at: :desc)
   end
 
   # GET /image/new
   def new
     @image = VisualArt.new
+  end
+
+  def edit
+    @image.image.cache!
   end
 
   # POST /image
@@ -23,6 +27,18 @@ class Admin::GalleryController < Admin::ApplicationController
         format.json { render :show, status: :created, location: @image }
       else
         format.html { render :new }
+        format.json { render json: @image.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
+  def update
+    respond_to do |format|
+      if @image.update(image_params)
+        format.html { redirect_to admin_gallery_index_path, notice: 'gallery was successfully updated.' }
+        format.json { render :index, status: :ok, location: @image }
+      else
+        format.html { render :edit }
         format.json { render json: @image.errors, status: :unprocessable_entity }
       end
     end
@@ -50,6 +66,7 @@ class Admin::GalleryController < Admin::ApplicationController
         .require(:visual_art)
         .permit(:image,
                 :image_cache,
-                :remove_image)
+                :remove_image,
+                :designed_at)
     end
 end

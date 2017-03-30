@@ -1,4 +1,6 @@
 <%= f.input :image, input_html: { preview_version: :thumb } %>
+<%= f.input :image_cache, as: "hidden" %>
+<%= f.input :designed_at, as: :date_picker, input_html: { class: "datetimepicker" } %>
 
 <div class="form-actions">
     <%= f.button :submit, :class => 'btn-primary' %>

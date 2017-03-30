@@ -15,7 +15,7 @@ Rails.application.routes.draw do
     resources :biography, only: [:show, :edit, :update]
     resources :discography
     resources :schedule
-    resources :gallery, only: [:index, :new, :create, :destroy]
+    resources :gallery, except: [:show]
   end
   get '*path', controller: 'application', action: 'render_404'
   # The priority is based upon order of creation: first created -> highest priority.
