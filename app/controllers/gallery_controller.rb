@@ -1,5 +1,5 @@
 class GalleryController < ApplicationController
   def index
-    @images = VisualArt.all.order(created_at: :desc)
+    @images = VisualArt.all.order(designed_at: :desc)
   end
 end
