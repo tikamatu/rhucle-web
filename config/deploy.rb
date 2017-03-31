@@ -32,7 +32,6 @@ set :pty, true
 # Default value for default_env is {}
 # set :default_env, { path: "/opt/ruby/bin:$PATH" }
 set :whenever_command, "bundle exec whenever"
-require "whenever/capistrano"
 # Default value for keep_releases is 5
 # set :keep_releases, 5
 namespace :deploy do
