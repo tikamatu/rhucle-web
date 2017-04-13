@@ -4,9 +4,18 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
     <meta name="viewport" content="target-densitydpi=device-dpi, width=1024, maximum-scale=1.0, user-scalable=yes">
+    <meta name="description" content="Rhucle is a Japanese artist, this project started in 2013. Currently he lives in Tokyo. He makes sounds, photograph, drawing, collage arts and wooden arts...etc. He keeps on creating many works so far.">
+    <meta name="keywords" content="Rhucle,Official,ambient">
     <title><%= content_for?(:title) ? yield(:title) : "Rhucle" %></title>
+    <meta name="title" content=<%= content_for?(:title) ? yield(:title) : "Rhucle" %>>
+    <meta property="og:type" content="website"/>
+    <meta property="og:title" content=<%= content_for?(:title) ? yield(:title) : "Rhucle" %>>
+    <meta property="og:description" content="Rhucle is a Japanese artist, this project started in 2013. Currently he lives in Tokyo. He makes sounds, photograph, drawing, collage arts and wooden arts...etc. He keeps on creating many works so far."/>
+    <meta property="og:image" content="http://rhucle.com/assets/logo-7da5fcdcc27aa20ff76c2ddf45f01c29edeb6363a1020d0b82d05aae19d1cd40.png" />
+    <meta property="og:url" content="http://rhucle.com" />
+    <meta property="og:site_name" content="Rhucle"/>
     <%= csrf_meta_tags %>
-
+    <link rel="SHORTCUT ICON" href="assets/logo-7da5fcdcc27aa20ff76c2ddf45f01c29edeb6363a1020d0b82d05aae19d1cd40.png" />
     <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
     <!--[if lt IE 9]>
       <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.1/html5shiv.js" type="text/javascript"></script>
